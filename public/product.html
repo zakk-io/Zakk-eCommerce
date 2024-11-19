@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAKK Bread</title>
+    <link rel="stylesheet" href="store.css">
+</head>
+<style>
+    .cart .img img {
+    width: 100%;
+    height: auto; /* Ensures the image scales proportionally */
+    object-fit: cover; /* Ensures the image covers the area of the container without distortion */
+}
+
+</style>
+
+<body>
+    <header class="container">
+        <nav>
+            <div class="logo">
+                <h1>ZAKK Bread</h1>
+            </div>
+            <div class="navigation">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="bread.html">Bread</a></li>
+                    <li><a href="view.html">View</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main">
+        <div class="cart">
+            <div class="img">
+                <img width="100%" src="https://picsum.photos/id/237/200/300" alt="Croissant">
+            </div>
+            <div class="content">
+                <h1>Croissant</h1>
+                <h2>$15</h2>
+                <p style="color: #714a278f;">
+                    "The dough is layered with butter, rolled and folded several times, resulting in a flaky, layered texture."
+                </p>
+                <input type="number" placeholder="1" id="quantity">
+                <button id="quantity_btn">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container footer-columns">
+            <div class="footer-column">
+                <h2>About Us</h2>
+                <p>No.1 in Rwanda</p>
+                <button>READ MORE</button>
+            </div>
+            <div class="footer-column">
+                <h2>Contact Info</h2>
+                <p>Musanze, Northern Province, Rwanda</p>
+                <p>mozakk.io@gmail.com</p>
+                <p>+250 798701484</p>
+            </div>
+        </div>
+        <div class="container footer-copyrights">
+            <p>Copyright 2024 by <b>ZAKK Bakery</b> | All Rights Reserved</p>
+        </div>
+    </div>
+
+    <script>
+        const quantity = document.getElementById('quantity');
+        const addToCartBtn = document.getElementById('quantity_btn');
+
+        addToCartBtn.addEventListener('click', () => {
+            const totalPrice = 15 * quantity.value;
+            alert(`Thanks for ordering! Your total is $${totalPrice}`);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    color: #2563eb;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #2563eb;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Hero Image Section */
+.hero-image {
+    margin-top: 60px; /* Increased space above the hero image */
+    height: 400px; /* Decreased from 600px to 400px */
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Product Display */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Increased min-width to 300px */
+    gap: 60px; /* Increased gap between products */
+    margin-top: 40px; /* Increased space from the cover */
+}
+
+.product-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 400px; /* Increased height of product box */
+}
+
+.product-item .image-wrapper {
+    overflow: hidden;
+    height: 60%; /* Adjust the height of the image */
+}
+
+.product-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.product-item .product-info {
+    padding: 15px;
+}
+
+.product-item h2 {
+    font-size: 1.5rem;
+    color: #1f2937;
+}
+
+.product-item .price {
+    font-size: 1.2rem;
+    color: #2563eb;
+    margin: 10px 0;
+}
+
+.product-item button {
+    padding: 12px 90px; /* Made button wider */
+    background-color: #2563eb;
+    color: white; /* Text color changed to white */
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-item button:hover {
+    background-color: #1d4ed8;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer Section */
+.footer {
+    background-color: #2563eb;
+    color: white;
+    padding: 40px 0;
+    margin-top: 40px;
+}
+
+.footer .footer-columns {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.footer .footer-column {
+    width: 45%;
+}
+
+.footer h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.footer button {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #2563eb;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.footer .footer-copyrights {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    padding: 0 60px 30px;
+}
+
+
+
+
+
+/* Main Product Cart */
+.main {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.cart {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 1000px; /* Increased max-width */
+    padding: 20px; /* Added padding to give more space inside */
+}
+
+.cart .img img {
+    width: 60%; /* Increased width for the image */
+    height: auto;
+}
+
+.cart .content {
+    padding: 30px; /* Increased padding for more space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%; /* Reduced width for the content */
+}
+
+.cart h1, .cart h2 {
+    margin-bottom: 15px; /* Increased margin for better spacing */
+}
+
+.cart input {
+    padding: 12px; /* Increased input padding */
+    width: 70px; /* Made input wider */
+    margin-bottom: 15px; /* Increased margin */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.cart button {
+    padding: 12px 20px; /* Increased button padding */
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem; /* Increased font size */
+}
+
+.cart button:hover {
+    background-color: #1d4ed8;
+}
