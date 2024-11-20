@@ -11,3 +11,8 @@ curl -X POST http://127.0.0.1:7000/api/products/create \
 ###
 //list products
 GET  http://127.0.0.1:7000/api/products
+
+
+###
+//delete product
+DELETE  http://127.0.0.1:7000/api/products/delete/673cdff57cd9648a9c675351

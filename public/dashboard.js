@@ -7,11 +7,11 @@ const ListProducts = async function(){
     
     var product_list = ""
     for (let product = data.products.length - 1; product >= 0; product--) {
-        product_list += `<tr>
-            <td id="name-product">${data.products[product].name}</td>
+        product_list += `<tr id="product-box">
+            <td>${data.products[product].name}</td>
             <td>
               <button class="update-btn" id="${data.products[product]._id}">Update</button>
-              <button class="delete-btn" id="${data.products[product]._id}">Delete</button>
+              <button class="delete-btn" id="${data.products[product]._id}" onclick="DeleteProduct('${data.products[product]._id}')">Delete</button>
             </td>
           </tr>` 
     }
@@ -52,6 +52,22 @@ productform.addEventListener('submit',async (e) => {
     alert('new product has been added')
     ListProducts()
 })
+
+
+//delete product
+const DeleteProduct = async function(task_id){
+    const response = await fetch(`/api/products/delete/${task_id}`, {
+        method: 'DELETE',
+    });
+
+    const data = await response.json()
+    alert(data.message)
+    if(data.status === 200){
+        document.getElementById(task_id).closest("#product-box").remove()
+    }
+}
+//delete product
+
 
 
 //list products endpoint

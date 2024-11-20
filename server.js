@@ -54,6 +54,28 @@ app.get('/api/products/',async (req,res) => {
 })
 //list products
 
+//delete product
+app.delete('/api/products/delete/:id',async (req,res) => {
+    const product_id = req.params.id
+    const product = await Products.findOne({_id:product_id})
+    if(product){
+        await Products.deleteOne({_id:product_id})
+        return res.status(200).json({
+            status: 200,
+            successful: true,
+            message: "product deleted successfully",
+        })
+    }
+
+    return res.status(404).json({
+        status: 404,
+        successful: false,
+        message: "product not found",
+    })
+
+})
+//delete product
+
 
 
 
