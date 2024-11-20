@@ -33,19 +33,8 @@
     </header>
 
     <div class="main">
-        <div class="cart">
-            <div class="img">
-                <img width="100%" src="https://picsum.photos/id/237/200/300" alt="Croissant">
-            </div>
-            <div class="content">
-                <h1>Croissant</h1>
-                <h2>$15</h2>
-                <p style="color: #714a278f;">
-                    "The dough is layered with butter, rolled and folded several times, resulting in a flaky, layered texture."
-                </p>
-                <input type="number" placeholder="1" id="quantity">
-                <button id="quantity_btn">Add to Cart</button>
-            </div>
+        <div class="cart" id="cart">
+
         </div>
     </div>
 
@@ -69,13 +58,29 @@
     </div>
 
     <script>
-        const quantity = document.getElementById('quantity');
-        const addToCartBtn = document.getElementById('quantity_btn');
+        const task_id = new URLSearchParams(window.location.search).get("id")
+        const cart = document.getElementById("cart")
 
-        addToCartBtn.addEventListener('click', () => {
-            const totalPrice = 15 * quantity.value;
-            alert(`Thanks for ordering! Your total is $${totalPrice}`);
-        });
+        const GetProduct = async function(){
+            const response = await fetch(`/api/products/${task_id}`)
+            const data = await response.json()
+            cart.innerHTML = `<div class="img">
+                <img width="100%" src="${data.product.image}"
+            </div>
+            <div class="content">
+                <h1>${data.product.name}</h1>
+                <h2>$${data.product.price}</h2>
+                <p style="color: #714a278f;">
+                    "${data.product.description}."
+                </p>
+                <input type="number" placeholder="1" id="quantity">
+                <button id="quantity_btn">Add to Cart</button>
+            </div>`
+           
+        }
+        GetProduct()
+        
+        
     </script>
 </body>
 </html>

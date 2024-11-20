@@ -14,7 +14,7 @@ const ListProducts = async function(){
                 <div class="product-info">
                     <h2>${data.products[product].name}</h2>
                     <p class="price">${data.products[product].price}</p>
-                    <button><a href="product?${data.products[product]._id}">Buy</a></button>
+                    <button><a href="product.html?id=${data.products[product]._id}">Buy</a></button>
                 </div>
             </div>` 
     }

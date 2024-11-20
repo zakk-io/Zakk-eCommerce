@@ -78,6 +78,24 @@ app.delete('/api/products/delete/:id',async (req,res) => {
 //delete product
 
 
+//get single product
+app.get('/api/products/:id',async (req,res) => {
+    const product_id = req.params.id
+    const product = await Products.findOne({_id:product_id})
+    if(product){
+        return res.status(200).json({
+            status: 200,
+            successful: true,
+            product
+        })
+    }
+
+    return res.redirect("product.html?message=no product with this id")
+
+})
+//get single product
+
+
 
 
 

@@ -16,3 +16,7 @@ GET  http://127.0.0.1:7000/api/products
 ###
 //delete product
 DELETE  http://127.0.0.1:7000/api/products/delete/673cdff57cd9648a9c675351
+
+
+###
+GET http://127.0.0.1:7000/api/products/673d9845cf579a2aa30ef27e
