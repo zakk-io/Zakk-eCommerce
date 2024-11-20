@@ -1,4 +1,4 @@
-;const express = require("express")
+const express = require("express")
 const mongoose = require("mongoose")
 const upload = require("./upload")
 const path = require("path")
@@ -16,7 +16,8 @@ mongoose.connect("mongodb://localhost:27017/ecommerce",{
 
 //middlewares
 app.use(express.json())
-app.use(express.static(path.join(__dirname,'public')))
+app.use('/uploads',express.static(path.join(__dirname, 'uploads'))); //make GET route for each imge in uploads
+app.use(express.static(path.join(__dirname,'public')))//make GET route for each file in public
 
 
 //api endpoints
@@ -28,7 +29,7 @@ app.post('/api/products/create',upload.single('image'), async (req,res) => {
         description : req.body.description,
         price : req.body.price,
         quantity : req.body.quantity,
-        image : `/uploads/${req.file.filename}`,
+        image : `/uploads/${req.file.filename}`, //save in mongodb with this name
 
     })
 

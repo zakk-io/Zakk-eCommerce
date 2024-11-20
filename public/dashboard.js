@@ -61,10 +61,10 @@ const DeleteProduct = async function(task_id){
     });
 
     const data = await response.json()
-    alert(data.message)
     if(data.status === 200){
         document.getElementById(task_id).closest("#product-box").remove()
     }
+    alert(data.message)
 }
 //delete product
 
