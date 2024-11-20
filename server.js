@@ -41,6 +41,19 @@ app.post('/api/products/create',upload.single('image'), async (req,res) => {
         product
     })
 })
+//create product
+
+//list products
+app.get('/api/products/',async (req,res) => {
+    const products = await Products.find()
+    return res.status(200).json({
+        status: 200,
+        successful: true,
+        products
+    })
+})
+//list products
+
 
 
 

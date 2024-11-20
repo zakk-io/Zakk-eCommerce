@@ -5,3 +5,9 @@ curl -X POST http://127.0.0.1:7000/api/products/create \
   -F "price=49.99" \
   -F "quantity=15" \
   -F "image=@/home/mozakk/Pictures/cover.jpeg"
+
+
+
+###
+//list products
+GET  http://127.0.0.1:7000/api/products

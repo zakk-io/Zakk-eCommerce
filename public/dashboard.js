@@ -1,3 +1,24 @@
+//lsit products
+const nameproduct = document.getElementById("name-product")
+const tablebody = document.getElementById("table-body")
+const ListProducts = async function(){
+    const response = await fetch('/api/products');
+    const data = await response.json()
+    
+    var product_list = ""
+    for (let product = data.products.length - 1; product >= 0; product--) {
+        product_list += `<tr>
+            <td id="name-product">${data.products[product].name}</td>
+            <td>
+              <button class="update-btn" id="${data.products[product]._id}">Update</button>
+              <button class="delete-btn" id="${data.products[product]._id}">Delete</button>
+            </td>
+          </tr>` 
+    }
+    tablebody.innerHTML = product_list
+}
+//lsit products
+
 //create product
 const productform = document.getElementById("product-form")
 const productname = document.getElementById("product-name")
@@ -22,5 +43,16 @@ productform.addEventListener('submit',async (e) => {
         body: formData,//send post request to the endpoint with the formData as body
     });
 
-    alert('new product has been added')  
+    productname.value = ""
+    productDescription.value = ""
+    productprice.value = ""
+    productquantity.value = ""
+    productimage.value = ""
+
+    alert('new product has been added')
+    ListProducts()
 })
+
+
+//list products endpoint
+ListProducts()
