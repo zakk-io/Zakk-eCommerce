@@ -8,9 +8,9 @@ const ListProducts = async function(){
     var product_list = ""
     for (let product = data.products.length - 1; product >= 0; product--) {
         product_list += `<tr id="product-box">
-            <td>${data.products[product].name}</td>
+            <td><a href="product.html?id=${data.products[product]._id}">${data.products[product].name}</a></td>
             <td>
-              <button class="update-btn" id="${data.products[product]._id}">Update</button>
+              <button class="update-btn"><a href="update-product.html?id=${data.products[product]._id}">Update</a></button>
               <button class="delete-btn" id="${data.products[product]._id}" onclick="DeleteProduct('${data.products[product]._id}')">Delete</button>
             </td>
           </tr>` 

@@ -21,7 +21,7 @@ h1 {
   font-size: 2.5rem;
 }
 
-/* Product Store Styles */
+
 .product-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -78,12 +78,12 @@ h1 {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Layout Styles for Panels */
+
 .container {
   display: flex;
   gap: 20px;
   padding: 20px;
-  max-width: 1650px; /* Increased max-width for a wider layout */
+  max-width: 1650px; 
   margin: 0 auto;
 }
 
@@ -95,11 +95,11 @@ h1 {
 }
 
 .left-panel {
-  flex: 1.5; /* Increased width for the form panel */
+  flex: 1.5; 
 }
 
 .right-panel {
-  flex: 2.5; /* Increased width for the table panel */
+  flex: 2.5; 
 }
 
 h2 {

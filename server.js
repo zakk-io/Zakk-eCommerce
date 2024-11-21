@@ -96,6 +96,32 @@ app.get('/api/products/:id',async (req,res) => {
 //get single product
 
 
+//update product
+app.put('/api/products/update/:id',async (req,res) => {
+    const product_id = req.params.id
+    const product = await Products.findOne({_id:product_id})
+
+    if(product){
+        await Products.updateOne({_id:product_id},{$set:req.body})
+        return res.status(200).json({
+            status: 200,
+            successful: true,
+            message: "product updated successfully",
+            redirected_url : "/dashboard.html"
+        })
+    }
+
+    return res.status(404).json({
+        status: 404,
+        successful: false,
+        message: "product not found",
+    })
+
+})
+
+//update product
+
+
 
 
 

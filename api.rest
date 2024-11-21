@@ -20,3 +20,15 @@ DELETE  http://127.0.0.1:7000/api/products/delete/673cdff57cd9648a9c675351
 
 ###
 GET http://127.0.0.1:7000/api/products/673d9845cf579a2aa30ef27e
+
+
+
+###
+curl -X PUT http://127.0.0.1:7000/api/products/update/673df4f0d455d42fcebe6205 \
+  -H "Content-Type: application/json" \
+  -d '{
+        "name": "Updated Product Name",
+        "description": "Updated description for the product.",
+        "price": 1200,
+        "quantity": 1000
+      }'
