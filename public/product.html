@@ -59,7 +59,7 @@
         const cart = document.getElementById("cart")
 
         const GetProduct = async function(){
-            const response = await fetch(`/api/products/${task_id}`)
+            const response = await fetch(`/api/product/${task_id}`)
             const data = await response.json()
             cart.innerHTML = `<div class="img">
                 <img width="100%" src="${data.product.image}"

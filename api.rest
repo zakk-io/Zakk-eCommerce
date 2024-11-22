@@ -10,7 +10,7 @@ curl -X POST http://127.0.0.1:7000/api/products/create \
 
 ###
 //list products
-GET  http://127.0.0.1:7000/api/products
+GET  http://127.0.0.1:7000/api/products/Electronics
 
 
 ###

@@ -1,8 +1,12 @@
 
 //list prodcts
 const productlist = document.getElementById("product-list")
+let category = new URLSearchParams(window.location.search).get("category")
+if(!category){
+    category = "all"
+}
 const ListProducts = async function(){
-    const response = await fetch('/api/products');
+    const response = await fetch(`/api/products/${category}`);
     const data = await response.json()
     
     var product_list = ""

@@ -2,7 +2,7 @@
 const nameproduct = document.getElementById("name-product")
 const tablebody = document.getElementById("table-body")
 const ListProducts = async function(){
-    const response = await fetch('/api/products');
+    const response = await fetch('/api/products/all');
     const data = await response.json()
     
     var product_list = ""

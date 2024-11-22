@@ -46,8 +46,15 @@ app.post('/api/products/create',upload.single('image'), async (req,res) => {
 //create product
 
 //list products
-app.get('/api/products/',async (req,res) => {
-    const products = await Products.find()
+app.get('/api/products/:category',async (req,res) => {
+    const category = req.params.category
+    let products;
+    if(category == "all"){
+        products = await Products.find()
+    }else{
+        products = await Products.find({category})
+    }
+    
     return res.status(200).json({
         status: 200,
         successful: true,
@@ -80,7 +87,7 @@ app.delete('/api/products/delete/:id',async (req,res) => {
 
 
 //get single product
-app.get('/api/products/:id',async (req,res) => {
+app.get('/api/product/:id',async (req,res) => {
     const product_id = req.params.id
     const product = await Products.findOne({_id:product_id})
     if(product){
