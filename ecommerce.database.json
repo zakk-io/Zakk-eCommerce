@@ -1,0 +1,132 @@
+[{
+  "_id": {
+    "$oid": "67404456afa45452d4710a5d"
+  },
+  "name": "lap top xyz",
+  "description": "nice one for sure",
+  "price": 450,
+  "quantity": 1,
+  "category": "Electronics",
+  "image": "/uploads/1732265046326.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6740537840405d58dd0a621e"
+  },
+  "name": "I phone 15",
+  "description": "I phone 15",
+  "price": 1300,
+  "quantity": 2,
+  "category": "Electronics",
+  "image": "/uploads/1732268920069.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6740539a40405d58dd0a6222"
+  },
+  "name": "watch X",
+  "description": "watch X",
+  "price": 300,
+  "quantity": 2,
+  "category": "Electronics",
+  "image": "/uploads/1732268954026.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "674053c140405d58dd0a6225"
+  },
+  "name": "wedding cake",
+  "description": "wedding cake",
+  "price": 10,
+  "quantity": 1,
+  "category": "Food",
+  "image": "/uploads/1732268993106.jpeg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "674053db40405d58dd0a6228"
+  },
+  "name": "ice cream",
+  "description": "ice cream",
+  "price": 4,
+  "quantity": 1,
+  "category": "Food",
+  "image": "/uploads/1732269019388.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "674053f640405d58dd0a622b"
+  },
+  "name": "pizza",
+  "description": "pizza",
+  "price": 2,
+  "quantity": 1,
+  "category": "Food",
+  "image": "/uploads/1732269046768.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6740542640405d58dd0a622e"
+  },
+  "name": "healthcare tool",
+  "description": "healthcare tool",
+  "price": 100,
+  "quantity": 1,
+  "category": "Health",
+  "image": "/uploads/1732269094311.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6740546040405d58dd0a6232"
+  },
+  "name": "healthcare tool2",
+  "description": "healthcare tool",
+  "price": 200,
+  "quantity": 1,
+  "category": "Health",
+  "image": "/uploads/1732269152077.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6740548b40405d58dd0a6235"
+  },
+  "name": "encanto movie",
+  "description": "encanto movie",
+  "price": 10,
+  "quantity": 1,
+  "category": "Media",
+  "image": "/uploads/1732269195319.jpeg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "674054a740405d58dd0a6238"
+  },
+  "name": "fall guy",
+  "description": "fall guy",
+  "price": 40,
+  "quantity": 1,
+  "category": "Media",
+  "image": "/uploads/1732269223695.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "674054c140405d58dd0a623b"
+  },
+  "name": "venom",
+  "description": "venom",
+  "price": 30,
+  "quantity": 1,
+  "category": "Media",
+  "image": "/uploads/1732269249299.jpg",
+  "__v": 0
+}]

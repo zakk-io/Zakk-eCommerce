@@ -10,7 +10,7 @@ const task_id = new URLSearchParams(window.location.search).get("id")
 
 
 const GetProduct = async function(){
-    const response = await fetch(`/api/products/${task_id}`)
+    const response = await fetch(`/api/product/${task_id}`)
     const data = await response.json()
     productname.value = data.product.name
     productDescription.value = data.product.description
