@@ -7,7 +7,7 @@ const Products = require("./model")
 
 
 const app = express()
-//contect to ecommerce database in mongodb server
+//contect to ecommerce database in local mongodb server
 mongoose.connect("mongodb://localhost:27017/ecommerce",{
     useNewUrlParser: true,
     useUnifiedTopology: true,
