@@ -29,6 +29,7 @@ app.post('/api/products/create',upload.single('image'), async (req,res) => {
         description : req.body.description,
         price : req.body.price,
         quantity : req.body.quantity,
+        category : req.body.category,
         image : `/uploads/${req.file.filename}`, //save in mongodb with this name
 
     })

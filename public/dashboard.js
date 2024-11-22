@@ -26,6 +26,8 @@ const productDescription = document.getElementById("product-description")
 const productprice = document.getElementById("product-price")
 const productquantity = document.getElementById("product-quantity")
 const productimage = document.getElementById("product-image")
+const productcategory = document.getElementById("product-category")
+
 
 
 productform.addEventListener('submit',async (e) => {
@@ -36,6 +38,7 @@ productform.addEventListener('submit',async (e) => {
     formData.append('description', productDescription.value)
     formData.append('price', productprice.value);
     formData.append('quantity', productquantity.value);
+    formData.append('category', productcategory.value);
     formData.append('image', productimage.files[0]); 
 
     const response = await fetch('/api/products/create', {
@@ -48,6 +51,7 @@ productform.addEventListener('submit',async (e) => {
     productprice.value = ""
     productquantity.value = ""
     productimage.value = ""
+    productcategory.value = "";
 
     alert('new product has been added')
     ListProducts()
