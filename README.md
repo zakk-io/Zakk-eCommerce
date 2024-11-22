@@ -1,6 +1,6 @@
 # Zakk Task Mnger
 
-> Simple Task ecommerce api with in nodejs and mongodb
+> Simple ecommerce api with nodejs and mongodb
 
 dashboard page
 ![Screenshot](./screanshots/dashboard.png)
